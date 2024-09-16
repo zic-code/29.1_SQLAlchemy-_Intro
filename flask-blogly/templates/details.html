@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details of {{user.first_name}} {{user.last_name}}</title>
+</head>
+<body>
+  <h1>{{user.first_name}} {{user.last_name}}</h1>
+  <img src="{{user.image_url}}" alt="" width="300px">
+<br>
+
+  <a href='/users/{{user.id}}/edit'><button>Edit</button></a>
+  <form action="/users/{{ user.id }}/delete" method="POST">
+    <button type="submit">Delete</button>
+</form>
+</body>
+</html>
